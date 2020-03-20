@@ -1,18 +1,6 @@
-$(document).foundation();
 
 $(function() {
-	var pressTimer;
-	var longPress = false;
-
-	$(".button").mouseup(function(){
-	  // Clear timeout
-	  clearTimeout(pressTimer);
-	  return false;
-	}).mousedown(function(){
-	  // Set timeout
-	  pressTimer = window.setTimeout(function() {longPress = true;},500);
-	  return false; 
-	});
+	var undo = false;
 
 	$(".button").on("click", function() {
 
@@ -21,7 +9,7 @@ $(function() {
 
 		$count = Number($(this).find("span").text());
 
-		if (longPress) {
+		if (undo) {
 			if ($sum >= $verdi) {
 				$sum = $sum - $verdi;
 				$count = $count - 1;
@@ -35,7 +23,7 @@ $(function() {
 		$("#sum").empty().text($sum);
 		$(this).find("span").empty().text($count);
 
-		longPress = false;
+		undo = false;
 	});
 });
 

@@ -1,44 +1,59 @@
 <!DOCTYPE html>
-<html class="" lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ticket to ride calculator - speed up your counting</title>
-  <meta name="description" content="No need for a ticket to ride scoring app. This is a free online ttr calculator to speed up the counting">
-  <meta name="keywords" content="ticket to ride counting calculator">
-  <link rel="stylesheet" href="app.css">
-  <meta class="foundation-mq">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<body>
-  <div id="wrapper" class="row align-middle expanded">
-    <div class="inner-wrapper row expanded text-center">
-      <div class="small-12 columns">
-        <h3>Speed up your ticket to ride counting.</h3>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Ticket to ride calculator - speed up your counting</title>
+    <meta name="description" content="No need for a ticket to ride scoring app. This is a free online ttr calculator to speed up the counting">
+    <meta name="keywords" content="ticket to ride counting calculator">
+    <!--<link rel="stylesheet" href="app.css">-->
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h3>Speed up your ticket to ride counting.</h3>
+        </div>
       </div>
-      <div class="small-12 columns text-center">
-        <button class="button" value="1">1<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
-        <button class="button" value="2">2<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
-        <button class="button" value="4">3<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
-        <button class="button" value="7">4<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
-        <button class="button" value="10">5<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
-        <button class="button" value="15">6<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
-        <button class="button" value="21">8<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
+      <div class="row">
+        <div class="col text-center">
+          <button class="button btn-primary btn-lg" value="1">1<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
+          <button class="button btn-primary btn-lg" value="2">2<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
+          <button class="button btn-primary btn-lg" value="4">3<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
+          <div class="w-100"></div>
+          <button class="button btn-primary btn-lg" value="7">4<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
+          <button class="button btn-primary btn-lg" value="10">5<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
+          <button class="button btn-primary btn-lg" value="15">6<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
+          <div class="w-100"></div>
+          <button class="button btn-primary btn-lg" value="21">8<hr><img src="tog.svg" width="40" height="20"><hr><span>0</span></button>
+        </div>
       </div>
 
-      <div class="small-12 columns text-center">
-        <div id="sum">0</div>
+      <hr>
+
+      <div class="row">
+        <div class="col text-center">
+          <div id="sum">0</div>
+        </div>
       </div>
 
-      <div class="small-12 columns text-center clear">
-        <a class="small button" href="index.html">Clear</a>
+      <hr>
+
+      <div class="row">
+        <div class="col text-center">
+          <a class="small button" href="index.html">Clear</a>
+        </div>
       </div>
 
     </div>
-  </div>
-  <script src="jquery.js"></script>
-  <script src="foundation.js"></script>
-  <script src="app.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
