@@ -10,7 +10,7 @@ $(function() {
 		$count = Number($(this).find("span").text());
 
 		if (undo) {
-			if ($sum >= $verdi) {
+			if ($count) {
 				$sum = $sum - $verdi;
 				$count = $count - 1;
 			}
@@ -25,6 +25,11 @@ $(function() {
 
 		undo = false;
 	});
+
+  $(".dec").on("click", function() {
+		undo = true;
+  });
+
 });
 
 
