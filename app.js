@@ -1,3 +1,12 @@
+var ridesum = 0;
+
+function updatesum() {
+  $val = ridesum;
+  if ($("#longest").prop('checked')) {
+    $val = $val + 10;
+  }
+  $("#sum").empty().text($val);
+}
 
 $(function() {
   var undo = false;
@@ -5,22 +14,21 @@ $(function() {
   $(".button").on("click", function() {
 
     $vagonval = Number($(this).attr("value"));
-    $sum = Number($("#sum").text());
 
     $count = Number($(this).find(".count").text());
 
     if (undo) {
       if ($count) {
-        $sum = $sum - $vagonval;
+        ridesum = ridesum - $vagonval;
         $count = $count - 1;
       }
     }
     else {
-      $sum = $vagonval + $sum;
+      ridesum = $vagonval + ridesum;
       $count = $count + 1;
     }
 
-    $("#sum").empty().text($sum);
+    updatesum();
     $(this).find(".count").empty().text($count);
 
     undo = false;
@@ -30,14 +38,19 @@ $(function() {
     undo = true;
   });
 
+  $("#longest").change(function() {
+    updatesum();
+  });
 });
 
 
 
 $(function() {
   $("#cancel").on("click", function() {
+    ridesum = 0;
     $("#sum").empty().text("0");
     $(".button .count").empty().text("0");
+    $("#longest").prop("checked", false);
     return false;
   });
 });
