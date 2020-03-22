@@ -4,24 +4,24 @@ $(function() {
 
   $(".button").on("click", function() {
 
-    $verdi = Number($(this).attr("value"));
+    $vagonval = Number($(this).attr("value"));
     $sum = Number($("#sum").text());
 
-    $count = Number($(this).find("span").text());
+    $count = Number($(this).find(".count").text());
 
     if (undo) {
       if ($count) {
-        $sum = $sum - $verdi;
+        $sum = $sum - $vagonval;
         $count = $count - 1;
       }
     }
     else {
-      $sum = $verdi + $sum;
+      $sum = $vagonval + $sum;
       $count = $count + 1;
     }
 
     $("#sum").empty().text($sum);
-    $(this).find("span").empty().text($count);
+    $(this).find(".count").empty().text($count);
 
     undo = false;
   });
@@ -37,7 +37,7 @@ $(function() {
 $(function() {
   $("#cancel").on("click", function() {
     $("#sum").empty().text("0");
-    $(".button span").empty().text("0");
+    $(".button .count").empty().text("0");
     return false;
   });
 });
