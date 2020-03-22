@@ -5,6 +5,7 @@ function updatesum() {
   if ($("#longest").prop('checked')) {
     $val = $val + 10;
   }
+  $val = $val + (4 * $("input[name='station']:checked").val());
   $("#sum").empty().text($val);
 }
 
@@ -41,6 +42,10 @@ $(function() {
   $("#longest").change(function() {
     updatesum();
   });
+
+  $("#stations").change(function() {
+    updatesum();
+  });
 });
 
 
@@ -51,6 +56,7 @@ $(function() {
     $("#sum").empty().text("0");
     $(".button .count").empty().text("0");
     $("#longest").prop("checked", false);
+    $("input[name='station']").filter('[value=0]').prop("checked", true);
     return false;
   });
 });
