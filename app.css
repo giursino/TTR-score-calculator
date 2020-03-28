@@ -11,10 +11,14 @@
   margin-bottom: 30px;
 }
 
+.row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 .inc {
-  margin-top: 10px;
   font-size: 25px;
   font-weight: bold;
+  margin-top: 5px;
 }
 
 .dec {

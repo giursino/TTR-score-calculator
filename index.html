@@ -30,34 +30,53 @@
 
       <hr/>
 
-      <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="longest">
-        <label class="custom-control-label" for="longest">Longest route</label>
-      </div>
-
-      <div>
-        <label>
-          Stations
-        </label>
-        <div id="stations" class="btn-group" data-toggle="buttons">
-          <label class="btn btn-primary active">
-            <input type="radio" name=station checked value=0>0
-          </label>
-          <label class="btn btn-primary">
-            <input type="radio" name=station value=1>1
-          </label>
-          <label class="btn btn-primary">
-            <input type="radio" name=station value=2>2
-          </label>
-          <label class="btn btn-primary">
-            <input type="radio" name=station value=3>3
-          </label>
+      <div class="row">
+        <div class="col text-right">
+          <span>Longest route</span>
+        </div>
+        <div class="col text-left">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="longest">
+            <label class="custom-control-label" for="longest"></label>
+          </div>
         </div>
       </div>
 
-      <div id="sum">0</div>
+      <div class="row">
+        <div class="col text-right">
+          <span>Stations</span>
+        </div>
+        <div class="col text-left">
+          <div>
+            <div id="stations" class="btn-group" data-toggle="buttons">
+              <label class="btn btn-primary active">
+                <input type="radio" name=station checked value=0>0
+              </label>
+              <label class="btn btn-primary">
+                <input type="radio" name=station value=1>1
+              </label>
+              <label class="btn btn-primary">
+                <input type="radio" name=station value=2>2
+              </label>
+              <label class="btn btn-primary">
+                <input type="radio" name=station value=3>3
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <button class="button btn-outline-primary btn-sm" id="cancel">Clear</button>
+      <div class="row">
+        <div class="col text-center">
+          <div id="sum">0</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col text-center">
+          <button class="button btn-outline-primary btn-sm" id="cancel">Clear</button>
+        </div>
+      </div>
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
