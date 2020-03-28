@@ -67,58 +67,51 @@
       <hr/>
 
       <div class="row">
+        <div class="col text-center">
+          <span id="trackdefault">Insert completed tracks here.</span>
+          <span id="tracks">
+          </span>
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col text-right">
-          <div id="tasks" class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-primary active">
-              <input type="radio" name=taskval value=0 checked>0
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-primary">
+              <input type="radio" name=trackval value=1>1
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name=taskval value=1>1
+              <input type="radio" name=trackval value=2>2
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name=taskval value=2>2
+              <input type="radio" name=trackval value=3>3
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name=taskval value=3>3
+              <input type="radio" name=trackval value=4>4
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name=taskval value=4>4
+              <input type="radio" name=trackval value=5>5
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name=taskval value=5>3
+              <input type="radio" name=trackval value=6>6
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name=taskval value=6>6
+              <input type="radio" name=trackval value=7>7
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name=taskval value=7>7
+              <input type="radio" name=trackval value=8>8
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name=taskval value=8>8
+              <input type="radio" name=trackval value=9>9
             </label>
             <label class="btn btn-primary">
-              <input type="radio" name=taskval value=9>9
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name=taskval value=10>10
+              <input type="radio" name=trackval value=10>10
             </label>
           </div>
         </div>
         <div class="col text-left">
-          <div id="stations" class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-primary active">
-              <input type="radio" name=station value=0 checked>0
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name=station value=1>1
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name=station value=2>2
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name=station value=3>3
-            </label>
-          </div>
+          <button class="btn-primary btn-lg" id="trackadd">Completed</button>
+          <button class="btn-primary btn-lg" id="trackrm">Not completed</button>
         </div>
       </div>
 

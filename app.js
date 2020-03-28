@@ -1,4 +1,5 @@
 var ridesum = 0;
+var tracksum = 0;
 
 function updatesum() {
   $val = ridesum;
@@ -6,7 +7,25 @@ function updatesum() {
     $val = $val + 10;
   }
   $val = $val + (4 * $("input[name='station']:checked").val());
+  $val = $val + tracksum;
   $("#sum").empty().text($val);
+}
+
+function updatetrack(add) {
+  var trackval = Number($("input[name='trackval']:checked").val());
+  if (trackval) {
+    $("#trackdefault").hide();
+    if (add) {
+      tracksum += trackval;
+    }
+    else {
+      tracksum -= trackval;
+    }
+    var tclass = (add ? "tcompleted" : "tnotcompleted");
+    var tsign = (add ? " + " : " - ");
+    $("#tracks").append('<span>' + tsign + '<span class="' + tclass + '">' + trackval + '</span></span>');
+    updatesum();
+  }
 }
 
 $(function() {
@@ -49,6 +68,15 @@ $(function() {
 });
 
 
+$(function() {
+  $("#trackadd").on("click", function () {
+    updatetrack(true);
+  });
+  $("#trackrm").on("click", function () {
+    updatetrack(false);
+  });
+});
+
 
 $(function() {
   $("#cancel").on("click", function() {
@@ -57,6 +85,9 @@ $(function() {
     $(".button .count").empty().text("0");
     $("#longest").prop("checked", false);
     $("input[name='station']").filter('[value=0]').prop("checked", true);
+    tracksum = 0;
+    $("#trackdefault").show();
+    $("#tracks").empty();
     return false;
   });
 });
