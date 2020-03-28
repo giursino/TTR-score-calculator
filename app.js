@@ -15,6 +15,7 @@ function updatetrack(add) {
   var trackval = Number($("input[name='trackval']:checked").val());
   if (trackval) {
     $("#trackdefault").hide();
+    $("#trackundo").show();
     if (add) {
       tracksum += trackval;
     }
@@ -22,7 +23,7 @@ function updatetrack(add) {
       tracksum -= trackval;
     }
     var tclass = (add ? "tcompleted" : "tnotcompleted");
-    var tsign = (add ? " + " : " - ");
+    var tsign = (add ? " +" : " -");
     $("#tracks").append('<span>' + tsign + '<span class="' + tclass + '">' + trackval + '</span></span>');
     updatesum();
   }
@@ -75,6 +76,12 @@ $(function() {
   $("#trackrm").on("click", function () {
     updatetrack(false);
   });
+  $("#trackundo").on("click", function () {
+    var last = $("#tracks span").last().parent();
+    tracksum -= parseInt(last.text());
+    updatesum();
+    last.remove();
+  });
 });
 
 
@@ -87,6 +94,7 @@ $(function() {
     $("input[name='station']").filter('[value=0]').prop("checked", true);
     tracksum = 0;
     $("#trackdefault").show();
+    $("#trackundo").hide();
     $("#tracks").empty();
     return false;
   });
