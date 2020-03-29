@@ -24,7 +24,7 @@ function updatetrack(add) {
     }
     var tclass = (add ? "tcompleted" : "tnotcompleted");
     var tsign = (add ? " +" : " -");
-    $("#tracks").append('<span>' + tsign + '<span class="' + tclass + '">' + trackval + '</span></span>');
+    $("#tracks").append('<span class="' + tclass + '">' + tsign + trackval + '</span>');
     updatesum();
   }
 }
@@ -84,11 +84,11 @@ $(function() {
     updatetrack(false);
   });
   $("#trackundo").on("click", function () {
-    var last = $("#tracks span").last().parent();
+    var last = $("#tracks span").last();
     tracksum -= Number(last.text());
     updatesum();
     last.remove();
-    if (!$("#tracks span").last().parent().text()) {
+    if (!$("#tracks span").last().text()) {
       trackinit();
     }
   });
