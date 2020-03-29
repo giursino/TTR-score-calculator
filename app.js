@@ -29,6 +29,13 @@ function updatetrack(add) {
   }
 }
 
+function trackinit() {
+  tracksum = 0;
+  $("#trackdefault").show();
+  $("#trackundo").hide();
+  $("#tracks").empty();
+}
+
 $(function() {
   var undo = false;
 
@@ -78,9 +85,12 @@ $(function() {
   });
   $("#trackundo").on("click", function () {
     var last = $("#tracks span").last().parent();
-    tracksum -= parseInt(last.text());
+    tracksum -= Number(last.text());
     updatesum();
     last.remove();
+    if (!$("#tracks span").last().parent().text()) {
+      trackinit();
+    }
   });
 });
 
@@ -92,10 +102,7 @@ $(function() {
     $(".button .count").empty().text("0");
     $("#longest").prop("checked", false);
     $("input[name='station']").filter('[value=0]').prop("checked", true);
-    tracksum = 0;
-    $("#trackdefault").show();
-    $("#trackundo").hide();
-    $("#tracks").empty();
+    trackinit();
     return false;
   });
 });
