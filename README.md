@@ -6,7 +6,8 @@ I've found many APP that do it but they need installation on smartphone and some
 
 I've created a small but complete score calculator that is accessible by web.
 
-This is a screenshot on mobile browser
+This is a screenshot on mobile browser:
+
 ![screenshot](doc/ttr-screenshot.png)
 
 # Instructions
@@ -17,7 +18,7 @@ This is a screenshot on mobile browser
 
 3. Select the number of stations remained
 
-4. Select the tracks value and then click 'completed' or 'not completed'. If you got an error, you can delete the last track value by clicking the 'delete' icon.
+4. Select the track value and then click 'completed' or 'not completed'. If you got an error, you can delete the last track value by clicking the 'delete' icon.
 
 5. See the results
 
