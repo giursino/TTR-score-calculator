@@ -68,39 +68,48 @@
       <hr/>
 
       <div class="row">
+        <div class="col">
+          <!--<button class="btn btn-primary" id="trackadd">Completed</button>-->
+          <!--<button class="btn btn-primary" id="trackrm">Not completed</button>-->
+          Destination
+          <br/>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline1">completed</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+            <label class="custom-control-label" for="customRadioInline2">not completed</label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row align-items-center">
+        <div class="col">
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+            <button class="btn btn-primary trackval">1</button>
+        </div>
+      </div>
+
+      <div class="row">
         <div class="col text-center">
-          <span id="trackdefault">Add completed tracks here.</span>
+          <span id="trackdefault">Add completed destinations here.</span>
           <span id="tracks"></span>
           <span id="trackundo" class="oi oi-delete" aria-hidden="true" style="display: none"></span>
         </div>
       </div>
-
-      <div class="row align-items-center">
-        <div class="col">
-          <div class="btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-primary"><input type="radio" name=trackval value=1>1</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=2>2</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=3>3</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=4>4</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=5>5</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=6>6</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=7>7</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=8>8</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=9>9</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=10>10</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=11>11</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=12>12</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=13>13</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=20>20</label>
-            <label class="btn btn-primary"><input type="radio" name=trackval value=21>21</label>
-          </div>
-        </div>
-        <div class="col">
-          <button class="btn btn-primary" id="trackadd">Completed</button>
-          <button class="btn btn-primary" id="trackrm">Not completed</button>
-        </div>
-      </div>
-
 
       <div class="row">
         <div class="col text-center">
